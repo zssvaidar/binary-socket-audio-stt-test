@@ -1,0 +1,8 @@
+core TTS
+https://pytorch.org/audio/main/tutorials/tacotron2_pipeline_tutorial.html
+
+cache files 
+~/.cache/torch/hub/checkpoints
+torch
+torchaudio
+matplotlib
