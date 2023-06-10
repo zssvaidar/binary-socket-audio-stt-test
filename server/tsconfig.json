@@ -11,7 +11,7 @@
         "noUnusedParameters": false,
         "removeComments": true,
         "declaration": false,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "allowSyntheticDefaultImports": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
