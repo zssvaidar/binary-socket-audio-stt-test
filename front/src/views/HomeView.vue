@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+    <HomeComponent :D1="API_1_D1"/>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HomeComponent from '@/components/HomeComponent.vue'; // @ is an alias to /src
 
 @Options({
   components: {
-    HelloWorld,
+    HomeComponent,
   },
 })
-export default class HomeView extends Vue {}
+export default class HomeView extends Vue {
+  
+  get API_1_D1 () {
+    return this.$store.state.TTS.D1
+  }
+
+  mounted(): void {
+    this.$store.dispatch('TTS/API_1', {})
+  }
+}
 </script>
